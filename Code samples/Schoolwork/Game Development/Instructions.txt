@@ -1,0 +1,5 @@
+-WASD or Arrow Keys to move
+-SPACE to jump
+-'E' to turn on lamps (which will highlight yellow when you are closeby)
+-'I' to turn on/off clues
+-CTRL to crouch

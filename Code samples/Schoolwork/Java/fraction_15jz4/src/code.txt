@@ -1,0 +1,61 @@
+.h:
+
+/*
+ * This version of the MyComplex class uses non-member overloading of the + operator
+ * and accessors.
+ */
+#pragma once
+
+#include <iostream>
+using namespace std;
+
+class fraction {
+public:
+	fraction();				// Default Constructor
+	fraction(int);			// Constructor, Conversion Constructor
+	fraction(int, int);	// Constructor
+private:
+	int numerator;
+	int denominator;
+};
+
+.cpp:
+
+//============================================================================
+// Name        : fraction_15jz4.cpp
+// Author      : 15jz4
+// Version     :
+// Copyright   :
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+#include "fraction_15jz4.h"
+
+fraction::fraction() : numerator(0), denominator(1) { }
+fraction::fraction(int n) : numerator(n), denominator(1) { }
+fraction::fraction(int n, int d) : numerator(n), denominator(d) { }
+
+int gcd (int m, int n) {
+	if (m <= n && n % m == 0) { return m; }
+	else if (n < m) { return gcd(m, n); }
+	else { return gcd(m, n%m); }
+}
+
+myOwnTest:
+
+#include <iostream>
+using namespace std;
+
+#include "fraction_15jz4.h"
+
+int main() {
+
+	fraction one;
+	cout << "one: " << one << endl;
+
+	return 0;
+
+}
