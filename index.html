@@ -15,6 +15,9 @@ body, html {
   line-height: 1.8;
 }
 
+p {
+  font-size:medium;
+}
 /* Create a Parallax Effect */
 .bgimg-1 {
   background-attachment: local;
@@ -72,10 +75,12 @@ body, html {
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p class="w3-center"><em>I aim to expand both my "technicality" and "writing" skills, the Sword and Chrysanthemum of my skills!</em></p>
+  <p>I am a proud graduate of Queen's University (2019) with a BA in Computing with passion not only for technology but also writing. During my post-secondary education I have studied core skills for understanding computing,
+    including system-level, Computer Algorithms, Data Structures and Architecture, and practical implementations such as Web Development and Design and Programming Paradigms. From my professional career at IBM,
+    I am also familiar with Data Analytics concepts and Machine Learning, and have experienced a big leap in professional communciation and team task organization. 
+    I aim to make product documentation as user-friendly as possible no matter the learning curve, from popular Python packages to Enterprise-oriented and technically dense applications.
+  </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i></b></p><br>
@@ -83,7 +88,7 @@ body, html {
   <div class="chart">
     <h2>Skill set &ndash; 2020</h2>
     <table id="data-table" border="1" cellpadding="10" cellspacing="0">
-      <caption>Familiarity / Fluency</caption>
+      <caption>Familiarity / fluency in percentage</caption>
       <thead>
         <tr>
           <td>&nbsp;</td>
@@ -115,9 +120,8 @@ body, html {
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class = "w3-row"><br><br><br><br><br><br><br>Welcome to my profile website. I am constantly looking to expand my skills to be able to offer the best content experience
+        I can provide with the most expansive and accurate technical knowledge to back up. </p>
     </div>
   </div>
   <p class="w3-large w3-center w3-padding-16">Entry skill level:</p>
@@ -157,44 +161,33 @@ body, html {
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  <p class="w3-center"><em>Here is a list of my works.<br></em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    <div class="w3-col m3  w3-card w3-left-align">
+      <h2><b>Professional work</b></h2>
+        <ul>
+          <li style="font-size:15px">I manage content for the <a href="https://dataplatform.cloud.ibm.com/gallery?context=cpdaas" style="font-size:15px" class="w3-hover-opacity">Watson Studio gallery</a>.</li>
+          <li style="font-size:15px">I write documentation for <a href="https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/welcome-main.html" style="font-size:15px" class="w3-hover-opacity">IBM WS Cloud</a> and <a href="https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/overview/welcome.html" style="font-size:15px" class="w3-hover-opacity">IBM CP4D</a>.</li>
+          <li style="font-size:15px">I created <a href="https://www.youtube.com/watch?v=US2B_0A8p-4" style="font-size:15px" class="w3-hover-opacity">WS videos</a>.</li>
+        </ul>
+      <!--<img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">-->
     </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    <div class="w3-col m3  w3-card w3-left-align" style="margin-left:100px;margin-right:100px;">
+      <h2><b>Coding samples</b></h2>
+      <p style="font-size:15px">The majority of my public coding work which does not transgress privacy rules can be found in my <a href="https://github.com/AshleyZhao/AshleyZhao.github.io" style="font-size:15px" class="w3-hover-opacity">GitHub</a>. Continuously being updated.<br><br></p>
     </div>
 
-    <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    <div class="w3-col m3 w3-card w3-left-align">
+      <h2><b>Writing samples</b></h2>
+      <p style="font-size:15px">The majority of my English work which does not transgress privacy rules can be found in my <a href="https://github.com/AshleyZhao/AshleyZhao.github.io/tree/main/Writing%20Samples" style="font-size:15px" class="w3-hover-opacity">GitHub/Writing Samples</a>.<br><br><br></p>
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    
   </div>
 </div>
 
@@ -209,33 +202,25 @@ body, html {
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center"><em>I'd love to get in touch!</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      <ul>
+        <li><H3><a href="">LinkedIn</a></H3></li>
+        <li><H3><a href="">GitHub</a></H3></li>
+        <li><H3><a href="">FaceBook</a></H3></li>
+        <li><H3><a href="">Twitter</a></H3></li>
+      </ul>
+      
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Toronto, CAN<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 647-915-6064<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ashley.zhao.dacml@gmail.com<br>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
       </form>
     </div>
   </div>
