@@ -1,0 +1,17 @@
+[[package]]
+category = "main"
+description = "Python Library for Studying Binary Trees"
+name = "binarytree"
+optional = false
+python-versions = "*"
+version = "5.1.0"
+
+[metadata]
+content-hash = "0209d0527d027bc8ac641644f05f4a03bd17ae576a65a75f27fade2d1916405a"
+python-versions = "^3.8"
+
+[metadata.files]
+binarytree = [
+    {file = "binarytree-5.1.0-py2.py3-none-any.whl", hash = "sha256:9f21efc73c66cdcc88b97b27eb02c3565e46088cf9b0f66089d221a87c8dc557"},
+    {file = "binarytree-5.1.0.tar.gz", hash = "sha256:6b8c5f6b298993015a3181f7e6d88e4b0be6632a649cc690a273a653d8dd6b1b"},
+]
