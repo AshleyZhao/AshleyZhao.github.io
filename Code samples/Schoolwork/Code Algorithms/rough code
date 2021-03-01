@@ -1,0 +1,15 @@
+# 1st case: arr[i] + rest of list
+
+  # Debug print
+  print("1st case of i: "+str(i))
+
+  # Debug print
+  print(i)
+  print(arr)
+
+  first = arr[i] + sum(arr[i+1:])
+  if (first > max_sum):
+    max_sum = first
+
+  # Debug print
+  # print (max_sum)
