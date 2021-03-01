@@ -26,30 +26,38 @@ def brute_force(arr, index=0):
   # Debug print
   # print("i:"+str(i))
 
-  max_sum = 0
+  max_sum = arr[i]
 
   j = 0
 
   temp_arr = list(arr)
-  temp_arr.pop(i)
+
+  temp_sum = 0
 
   while (j < len(arr)):
 
 
     # Should change this to if sum + temp_arr[j] >= max_sum
-    temp_sum = arr[i] + sum(temp_arr[j:(len(arr) - 1)])
-    if (temp_sum > max_sum):
+    
+    if (temp_arr[j] + temp_sum > max_sum):
+      temp_sum = temp_arr[j] + temp_sum
       max_sum = temp_sum
+
     
     # Debug print
+    
+    
+    '''
     print("i: "+str(i))
     print("j: "+str(j))
-    print("arr[i]: "+str(arr[i]))
+    #print("arr[i]: "+str(arr[i]))
     print("temp_arr: ")
     print(temp_arr)
-    print("slice: ")
-    print(temp_arr[j:(len(arr) - 1)])
+    #print("slice: ")
+    #print(temp_arr[j:(len(arr) - 1)])
     print("max_sum: "+str(max_sum))
+    '''
+    
 
     j = j + 1
 
@@ -65,7 +73,7 @@ def brute_force(arr, index=0):
 
 
 
-arr = [3, 9, 8, -8, -1, 8]
+arr = rand_array()
 print(arr)
 print(brute_force(arr,0))
 print(arr)
