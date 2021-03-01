@@ -72,6 +72,27 @@ def brute_force(arr, index=0):
 
 
 
+# Incomplete
+def find_max_subarr(arr):
+
+  # Base case
+  if len(arr) == 1:
+    return arr[0]
+  else: 
+    mid = len(arr) // 2
+    left_sum = find_max_subarr(arr[:mid])
+    right_sum = find_max_subarr(arr[mid+1:])
+    cross_sum = find_max_subarr(arr[(mid-(mid//2)):(mid+(mid//2))])
+
+    if left_sum >= cross_sum and left_sum >= right_sum:
+      return left_sum
+    elif right_sum >= cross_sum and right_sum >= left_sum:
+      return right_sum
+    else:
+      return cross_sum
+     
+    
+
 
 arr = rand_array()
 print(arr)
