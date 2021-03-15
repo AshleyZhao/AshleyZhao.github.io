@@ -1,15 +1,46 @@
-# 1st case: arr[i] + rest of list
+  if len(A) == 0 or len(A) == 2: #finished recursing
+    return None
+  if len(A) == 1: #left with singular element
+    return index
+  
+  else:
+    mid = len(A) // 2
 
-  # Debug print
-  print("1st case of i: "+str(i))
+    if A[mid] != A[mid-1] and A[mid] != A[mid+1]: #Found the odd number
+      return mid
+    
+    else:
+      if A[mid] == A[mid - 1]: #These two elements are the same
+        high = mid -2
+        low = mid + 1
+      else:
+        high = mid -1
+        low = mid + 2
 
-  # Debug print
-  print(i)
-  print(arr)
+      index = high
+      left = find_single(A[:high],index)
+      if left != None:
+        return left
 
-  first = arr[i] + sum(arr[i+1:])
-  if (first > max_sum):
-    max_sum = first
+      index = low
+      right = find_single(A[low:],index)
+      if right != None:
+        return right
 
-  # Debug print
-  # print (max_sum)
+
+      if left_search == None:
+        print("=====left search is none")
+        return right_search
+      else:
+        print("=====left search is found")
+        return left_search
+
+    else: #A[mid] == A[mid-1]
+      left_search = find_single(A[:mid-2], len(A[:mid-2])//2 -1, low, mid-2)
+      right_search = find_single(A[mid+1:], len(A[mid+1:])//2 -1, mid+1, high)
+      if left_search == None:
+        print("=====left search is none")
+        return right_search
+      else:
+        print("=====left search is found")
+        return left_search
