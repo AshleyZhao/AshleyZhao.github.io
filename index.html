@@ -48,7 +48,27 @@ p {
     min-height: 400px;
   }
 }
+
+.btn {
+  background-color: white;
+  border-radius: 25px;
+  color: grey;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: white;
+  background-color: darkmagenta;
+}
 </style>
+
+<script>
+  function downloadResume() {
+    <a href="/images/myw3schoolsimage.jpg" download></a>
+  }
+</script>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -90,36 +110,9 @@ p {
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i></b></p><br>
-<!--Chart-->
-<!--   <div class="chart">
-    <h2>Skill set &ndash; 2020</h2>
-    <table id="data-table" border="1" cellpadding="10" cellspacing="0">
-      <caption>Familiarity / fluency in percentage</caption>
-      <thead>
-        <tr>
-          <td>&nbsp;</td>
-          <th scope="col">HTML/MD</th>
-          <th scope="col">Java</th>
-          <th scope="col">Python</th>
-          <th scope="col">SQL</th>
-          <th scope="col">Excel/PPT</th>
-          <th scope="col">English</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"></th>
-          <td>60</td>
-          <td>70</td>
-          <td>85</td>
-          <td>65</td>
-          <td>80</td>
-          <td>90</td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
-<!--End chart-->
+
+      <a href="https://github.com/AshleyZhao/AshleyZhao.github.io/raw/main/AshleyZhaoResume.pdf" download><button class="btn" style="width:100%" onclick="downloadResume()"><i class="fa fa-download"></i> Download Resume</button></a>
+
     </div>
 
     
@@ -131,7 +124,7 @@ p {
         <li>Online documentation concerning Machine Learning service, Rest API, microservices</li>
         <li>Tutorial samples about data on Cloud, model training, model deployment, pipelines, R applications.</li>
         <li>Using Python and other SDK/libraries such as <code>matplotlib, Scikit-learn</code>.</li>
-        <li>End-to-end testing of various ETL tutorials in Jupyter notebooks and WML features.</li>
+        <li>End-to-end testing of various ETL tutorials in</li>
       </ul>
       </p>
     </div>
