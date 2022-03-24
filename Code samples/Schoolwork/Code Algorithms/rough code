@@ -1,46 +1,94 @@
-  if len(A) == 0 or len(A) == 2: #finished recursing
-    return None
-  if len(A) == 1: #left with singular element
-    return index
+print("="*40)
+
+n = len(Train)
+
+for i in range(0,n):
+
+  print("platform:",i)
   
-  else:
-    mid = len(A) // 2
+  if(i == 0):
+    platforms = [0]
+    cur_p = 0
+    cur_time = Train[0][1] # Temp finish time
+    platform_needed = False
+    next_plat_time = Train[0][1]
+    #temp_train = Train[0][1]
+    Train.pop(0)
 
-    if A[mid] != A[mid-1] and A[mid] != A[mid+1]: #Found the odd number
-      return mid
+
+  if Train != None:
+    for train in Train:
+      if train[0] > cur_time: # if the train's start time is later than this platform's current finish time
+        platforms.append(cur_p) # Have this platform host this train
+        cur_time = train[1] #Have the finish time equal to this platform's last train's finish time
+        Train.remove(train)
+      else:
+        if (platform_needed == False):
+          temp_train = train
+          next_plat_time = train[1]
+          platform_needed = True
+
+      # If there is the case where multiple platforms are needed,
+      # We add the singular train to the next platform and remove it.
+      # Then the next iteration will begin using the new platform's train finish time.
+      if platform_needed == True:
+        # print(temp_train)
+        Train.remove(temp_train)
+        platforms.append(i+1)
+        cur_time = next_plat_time
+        platform_needed = False
     
+  else:
+    print("do nothing")
+
+print(platforms)
+
+
+while temp_Train != []:
+
+  print("Current train is ", temp_Train[0])
+  #Iterate through each platform while train list is not empty, looking for a platform
+  for i in range(0,n-1):
+    print("i ", i)
+    #print("cur_platform_ftime", cur_platform_ftime[i])
+    if cur_platform_ftime[i] < temp_Train[0][0]:
+      platforms.append(i)
+      cur_platform_ftime[i] = temp_Train[0][1]
+      print("Train ", temp_Train.pop(0), "is removed")
+      break
+
+  #print("Now, trains are ",temp_Train)
+
+print(platforms)
+
+
+''' for i in range(0,platforms):
+
+  print("i: ",i)
+  
+
+  # j = 0
+
+  #trains = len(Train)
+  cur_end_time = 0
+
+  for train in Train:
+    
+    if train[0] > cur_end_time:
+      print("debug:")
+      print("j:", j)
+      print("train = ",train)
+
+      index[j] = i
+      cur_start_time = train[0]
+      cur_end_time = train[1]
+      Train.remove(train)
+      print("Removed, ", Train)
+
     else:
-      if A[mid] == A[mid - 1]: #These two elements are the same
-        high = mid -2
-        low = mid + 1
-      else:
-        high = mid -1
-        low = mid + 2
+      print("Got here but didn't catch")
 
-      index = high
-      left = find_single(A[:high],index)
-      if left != None:
-        return left
-
-      index = low
-      right = find_single(A[low:],index)
-      if right != None:
-        return right
-
-
-      if left_search == None:
-        print("=====left search is none")
-        return right_search
-      else:
-        print("=====left search is found")
-        return left_search
-
-    else: #A[mid] == A[mid-1]
-      left_search = find_single(A[:mid-2], len(A[:mid-2])//2 -1, low, mid-2)
-      right_search = find_single(A[mid+1:], len(A[mid+1:])//2 -1, mid+1, high)
-      if left_search == None:
-        print("=====left search is none")
-        return right_search
-      else:
-        print("=====left search is found")
-        return left_search
+    j += 1
+  print("End of loop ",i, "Trains left ", Train)
+  print(index)
+print(index) '''
