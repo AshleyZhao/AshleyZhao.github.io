@@ -31,7 +31,7 @@ for fp in filepaths:
             
             test = pd.read_csv(path, names=["Notebooks"])
 
-            test2 = pd.read_csv('/Users/ashleyzhao/Downloads/Event.csv', skiprows=lambda x: x < 8, names=['Cohort', 'Assets', 'CTA'])
+            test2 = pd.read_csv('/Users/ashleyzhao/Downloads/Event Segmentation - CTA Clicked (2021.04.26 - 2022.04.09).csv', skiprows=lambda x: x < 8, names=['Cohort', 'Assets', 'CTA'])
             test2 = test2.replace(r'\t','', regex=True)
 
             test2["Assets"] = test2["Assets"].astype(str)
