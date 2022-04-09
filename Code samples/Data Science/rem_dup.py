@@ -20,8 +20,10 @@ for fp in filepaths:
         else:
             print("unknown file format.")
 
+        # Drop all unnamed columns
         data.drop(data.columns[data.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
 
+        # Drop all duplicates but keep the first instance
         data.drop_duplicates(keep="first",inplace=True)
 
         data.to_csv('output' + str(files) + '.csv')
