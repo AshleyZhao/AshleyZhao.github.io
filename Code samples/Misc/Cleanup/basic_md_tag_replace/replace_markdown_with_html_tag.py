@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
+path = "/Users/ashleyzhao/GitHub/Docs/cpd-mddoc-src/topics/analyze-data/ml-orchestration-expr-builder.liquid.md"
+output = 'new_expr_builder.md'
+
 # get the file
 def read_file():
-    path = "/Users/ashleyzhao/GitHub/Docs/cpd-mddoc-src/topics/analyze-data/ml-orchestration-expr-builder.liquid.md"
+    
     f = open(path, "r")
     print(f.readline())
     return f
@@ -27,14 +30,26 @@ Lines = text.readlines()
 
 new_Lines = []
 
+def generate_id(header):
+
+    header = header.replace("#### ", "")
+    header = header.lower()
+    header.replace(' ', '-')
+
+    id = "{: #" + header + "}"
+
+    return id
+
 for line in Lines:
     if re.match(ex,line ):
         print("Match found")
         print(line.strip())
         new_Line = line.strip()
-        new_Line= new_Line.replace('#### ', '')
-        new_Line = '<h4>'+new_Line+'</h4>'
+        #Old code to replace markdown tagging
+        #new_Line= new_Line.replace('#### ', '')
+        #new_Line = '<h4>'+new_Line+'</h4>'
         new_Lines.append(new_Line)
+        new_Lines.append(generate_id(new_Line))
         # debug
     else:
         new_Line = line.strip()
@@ -46,7 +61,7 @@ for line in Lines:
 
 print(new_Lines)
 
-file = open('new_expr_builder_2.md','w')
+file = open(output,'w')
 for line in new_Lines:
 	file.write(line+"\n")
 file.close()
