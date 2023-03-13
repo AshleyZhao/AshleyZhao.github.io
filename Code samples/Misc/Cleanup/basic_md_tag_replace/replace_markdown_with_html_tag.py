@@ -2,6 +2,7 @@
 
 path = "/Users/ashleyzhao/GitHub/Docs/cpd-mddoc-src/topics/analyze-data/ml-orchestration-expr-builder.liquid.md"
 output = 'new_expr_builder.md'
+id_num = 1
 
 # get the file
 def read_file():
@@ -35,6 +36,11 @@ def generate_id(header):
     header = header.replace("#### ", "")
     header = header.lower()
     header.replace(' ', '-')
+
+    if header == "syntax" or header == "examples":
+        global id_num
+        header = header + str(id_num)
+        id_num += 1
 
     id = "{: #" + header + "}"
 
