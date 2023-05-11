@@ -1,0 +1,96 @@
+Use AutoAI to predict time series anomalies
+Federated Learning XGBoost Demo Part 2 - for Party
+Federated Learning XGBoost Demo Part 1 - for Admin
+Federated Learning Tensorflow 2 Demo Part 1 - for Admin
+Federated Learning Tensorflow 2 Demo Part 2 - for Party
+Insights from New York car accident reports
+Visualize data with the matplotlib library
+Predicting Spot Exchange Rates with ARIMA
+Use Spark to predict product line with WML
+Use Spark to predict customer churn (Batch)
+Use Spark to predict credit risk with WML
+Use Spark to predict business area for car rental company with WML
+Federated Learning FHE Demo
+Complaint classification with Watson NLP
+Entity extraction on Financial Complaints with Watson NLP
+Financial complaint analysis
+Car complaint analysis
+Use AutoAI and Lale to predict credit risk with IBM WML
+Using Data Engine
+Explore particulate matter data using IBM Cloud Data Engine
+Using IBM Cloud Data Engine to analyze LogDNA data
+Deploying a Decision Optimization Model with Watson Machine Learning
+Dialog Flow Analysis for Watson Assistant
+Machine Learning for Equipment Failure Prediction and Equipment Maintenance (PM)
+Dialog skill analysis for Watson Assistant
+Use AutoAI and timeseries data for PM2.5
+Action skill analysis for Watson Assistant
+How to make targeted offers to customers
+Sampling potential energy surfaces
+Overlapping co-CLuster Recommendation algorithm (OCuLaR)
+Use scikit-learn and AI lifecycle to predict Boston house prices
+The Nurse Assignment Problem
+Times World University Ranking analysis
+Use decision trees and XGBoost to classify tumor data
+Use spatial indexing to query spatial data
+Spatial queries in PySpark
+Machine Learning artifacts export and import
+Use scikit-learn to predict diabetes progression
+Use Spark for Python to load data and run SQL queries
+Quantum Application Classes
+Use scikit-learn and custom library to predict temperature with WML
+German credit risk prediction with Scikit-learn for model monitoring
+Use the spatio-temporal library for location analytics
+Use AutoAI to predict credit risk
+The Unit Commitment Problem
+Use Decision Optimization to plan your diet
+Use PMML to predict Iris species
+Use Python to recognize hand-written digits
+Use scikit-learn to recognize hand-written digits
+Use custom software spec to create statsmodels function
+Monitor credit risk model with Watson Openscale
+Small Steps to TensorFlow
+Use SPSS to predict customer churn
+Use XGBoost to classify tumors
+Quantum Neural Networks
+Access PostgreSQL with R
+Access MySQL with R
+Use Spark for R to load data and run SQL queries
+Measure Watson Assistant Performance
+Supply Chain Disruption
+Use AutoAI predict credit risk (Batch)
+Analyze energy consumption in buildings
+Using the Progress Listeners with CPLEX Optimizer
+Use statsmodels to forecast time series data
+Use Lagrangian relaxation
+Incremental modeling with decision optimization
+Benders decomposition with decision optimization
+Use decision optimization to schedule sports games
+Analyze Watson Assistant Effectiveness
+Analyze precipitation data
+Quantum PyTorch Connector
+Calculating Thermodynamics Observables
+Minimum Eigen Optimizer
+Financial Portfolio Optimization
+Quantum Kernel Machine Learning
+Sampling methods for panel data
+Finding optimal locations of new stores using Decision Optimization
+Predictive Maintenance Optimization
+Review of Elasticity and Pricing Strategy
+Promoting financial products to bank customers
+Determining a threshold for binary dependent variables
+Organize delivery with Decision Optimization
+The Pasta Production Problem
+House Building with worker skills
+Maximizing oil company profits
+Sudoku
+Building steel coils
+Sched Square
+Correlate text content across documents
+Use Spark SQL to explore heating problems in Manhattan
+Model a Golomb Ruler
+Analyze images in COS with Mathematical Morphology
+Use Client Insights in meeting preparations
+Create a multi source & target data flow
+Access MySQL with Python
+Access PostgreSQL with Python
