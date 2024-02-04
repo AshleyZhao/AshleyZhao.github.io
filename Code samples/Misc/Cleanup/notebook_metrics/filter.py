@@ -10,7 +10,7 @@ It drops rows that are not found in the text file.
 """
 
 # Get the file path for the data
-data_path = "/Users/ashleyzhao/GitHub/AshleyZhao.github.io/Code samples/Data Science/Datasets/Non-IBMers for notebooks.csv"
+data_path = "/Users/ashleyzhao/Downloads/Non-IBMers for notebooks.csv"
 raw_data = pd.read_csv(data_path, names=['Title', 'CTA'])
 raw_data['Title'] = raw_data['Title'].str.replace('\t','')
 
