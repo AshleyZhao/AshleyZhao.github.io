@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="description" content="{{ shortdesc }}">
+  <meta name="source.format" content="markdown">
+  <meta name="copyright" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.Rights.Owner" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.date" scheme="iso8601" content="{{ lastModified.date }}">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title id="find-trending-words-title">Find trending words</title>
+  <!-- <link rel="stylesheet" href="../style.css"/> -->
+  <style>
+    body {
+      font-family: Helvetica, arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: white;
+      padding: 10px 10px 10px 10px;
+      color: #333;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    
+    ul.compact>li {
+      margin-bottom: 0.4em;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    
+    #readme {
+      padding: 3px;
+      background: #EEE;
+      border-radius: 3px;
+    }
+    
+    #readme .markdown-body,
+    #readme .plain {
+      background-color: #fff;
+      border: 1px solid #CACACA;
+      padding: 30px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 20px 0 10px;
+      padding: 0;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+      margin: 10px 0 10px;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h2 {
+      font-size: 24px;
+      border-bottom: 1px solid #cccccc;
+      color: black;
+    }
+    
+    h3 {
+      font-size: 18px;
+    }
+    
+    blockquote {
+      border-left: 4px solid #dddddd;
+      padding: 0 15px;
+      color: #777777;
+    }
+    
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    li,
+    table,
+    pre {
+      margin: 15px 0;
+    }
+    
+    blockquote> :first-child {
+      margin-top: 0;
+    }
+    
+    blockquote> :last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: #4183C4;
+      text-decoration: none;
+    }
+    
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+    
+    ul :first-child,
+    ol :first-child {
+      margin-top: 0;
+    }
+    
+    ul :last-child,
+    ol :last-child {
+      margin-bottom: 0;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+      font-family: Consolas, Monaco, "Lucida Console", Monospace, "Courier New", Courier;
+    }
+    
+    table {
+      padding: 0;
+      border-collapse: collapse;
+    }
+    
+    table tr {
+      /* border-top: 1px solid #cccccc; */
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+    }
+    
+    pre {
+      background-color: #f8f8f8;
+      border: 1px solid #cccccc;
+      font-size: 13px;
+      line-height: 19px;
+      overflow: auto;
+      padding: 6px 10px;
+      border-radius: 3px;
+    }
+    
+    pre code,
+    pre tt {
+      background-color: transparent;
+      border: none;
+    }
+    
+    pre code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: none;
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="find-trending-words-title" role="article">
+      <h1 id="find-trending-words">Find trending words</h1>
+      <hr>
+      <p>Instantly find the occurences of up to 5 select words in a specified input string.</p>
+      <p>Enhance your application's data driven capabilities with this Java API feature by capturing keyword prevalence in textual data such as news articles, e-commerce product descriptions, social media text and more.</p>
+      <h2 id="overview-invoke-the-api">Overview: Invoke the API</h2>
+      <p>In this document, you will learn to invoke the API.</p>
+      <ul>
+        <li><a href="#params">Parameters</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+      <p>
+        <a id="params"></a>
+      </p>
+      <h3 id="parameters">Parameters</h3>
+      <table>
+        <tr>
+          <th>Parameters</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>haystack</code></td>
+          <td><b>String</b></td>
+          <td>List of terms that are searched and counted in the <code>haystack</code> parameter.<br>This can be a sentence, or a list of strings separated by these expressions:
+            <ul>
+              <li> blank space (<code> </code>)
+              </li>
+              <li> quotations (<code>"</code>)
+              </li>
+              <li> apostrophe (<code>'</code>)
+              </li>
+              <li> tab (<code>\t</code>)
+              </li>
+              <li> newline (<code>\n</code>)
+              </li>
+              <li> backspace (<code>\b</code>)
+              </li>
+              <li> page break (<code>\f</code>)
+              </li>
+              <li> carriage return (<code>\r</code>)
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><code>needles</code></td>
+          <td><b>List of Strings</b></td>
+          <td>List of terms that are searched and counted in the <code>haystack</code> parameter.</td>
+        </tr>
+      </table>
+      <p>
+        <a id="examples"></a>
+      </p>
+      <h4 id="examples">Examples</h4>
+      <p>To analyze the text, initialize an object with the following parameters.</p>
+      <pre><code class="hljs">JSONObject humptyDumpty = new JSONObject();
+List&lt;String&gt; keywords = Arrays.asList(&quot;Humpty&quot;, &quot;Dumpty&quot;, &quot;king&quot;, &quot;men&quot;, &quot;egg&quot;);
+
+humptyDumpty.put(&quot;haystack&quot;,&quot;Humpty Dumpty sat on a wall\n
+Humpty Dumpty had a great fall\n
+All the king's horses and all the king's men\n
+Couldn't put Humpty together again&quot;);
+
+findNeedles(humptyDumpty.haystack, keywords);
+</code></pre>
+      <p><strong>Response:</strong></p>
+      <p>If <code>findNeedles</code> is called successfully with the above parameters, this is the response:</p>
+      <pre><code class="hljs">Humpty: 3
+Dumpty: 2
+king: 2
+men: 1
+egg: 0
+</code></pre>
+      <h4 id="troubleshooting-responses">Troubleshooting responses</h4>
+      <p>If your input list for the <code>needles</code> parameter contains more than 5 words, you will get the following message:</p>
+      <pre><code class="hljs">Too many words!
+</code></pre>
+      <h4 id="code-improvement">Code improvement</h4>
+      <p>Here are some suggestions as to how the code can be improved for at least minor memory and runtime efficiency:</p>
+      <ul>
+        <li>Put this <code>String[] words = haystack.split(&quot;[ \&quot;\'\t\n\b\f\r]&quot;, 0);</code> outside of the loop so it is only initialized once</li>
+        <li>Instead of <code>compareTo</code>, use <code>.equals</code></li>
+        <li>Instead of initializing an array, use a temporary variable to count each term occurrence and place it into a hashmap or JSON object at the end</li>
+      </ul>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="description" content="{{ shortdesc }}">
+  <meta name="source.format" content="markdown">
+  <meta name="copyright" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.Rights.Owner" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.date" scheme="iso8601" content="{{ lastModified.date }}">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title id="rest-vs-soap-api-title">REST vs. SOAP API</title>
+  <!-- <link rel="stylesheet" href="../style.css"/> -->
+  <style>
+    body {
+      font-family: Helvetica, arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: white;
+      padding: 10px 10px 10px 10px;
+      color: #333;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    
+    ul.compact>li {
+      margin-bottom: 0.4em;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    
+    #readme {
+      padding: 3px;
+      background: #EEE;
+      border-radius: 3px;
+    }
+    
+    #readme .markdown-body,
+    #readme .plain {
+      background-color: #fff;
+      border: 1px solid #CACACA;
+      padding: 30px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 20px 0 10px;
+      padding: 0;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+      margin: 10px 0 10px;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h2 {
+      font-size: 24px;
+      border-bottom: 1px solid #cccccc;
+      color: black;
+    }
+    
+    h3 {
+      font-size: 18px;
+    }
+    
+    blockquote {
+      border-left: 4px solid #dddddd;
+      padding: 0 15px;
+      color: #777777;
+    }
+    
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    li,
+    table,
+    pre {
+      margin: 15px 0;
+    }
+    
+    blockquote> :first-child {
+      margin-top: 0;
+    }
+    
+    blockquote> :last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: #4183C4;
+      text-decoration: none;
+    }
+    
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+    
+    ul :first-child,
+    ol :first-child {
+      margin-top: 0;
+    }
+    
+    ul :last-child,
+    ol :last-child {
+      margin-bottom: 0;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+      font-family: Consolas, Monaco, "Lucida Console", Monospace, "Courier New", Courier;
+    }
+    
+    table {
+      padding: 0;
+      border-collapse: collapse;
+    }
+    
+    table tr {
+      /* border-top: 1px solid #cccccc; */
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+    }
+    
+    pre {
+      background-color: #f8f8f8;
+      border: 1px solid #cccccc;
+      font-size: 13px;
+      line-height: 19px;
+      overflow: auto;
+      padding: 6px 10px;
+      border-radius: 3px;
+    }
+    
+    pre code,
+    pre tt {
+      background-color: transparent;
+      border: none;
+    }
+    
+    pre code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: none;
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="rest-vs-soap-api-title" role="article">
+      <h1 id="rest-vs-soap-api">REST vs. SOAP API</h1>
+      <hr>
+      <h2 id="what-is-an-api">What is an API?</h2>
+      <p>To recap, an API (Application Programming Interface) is a software interface that allows communication, such as retrieval, input, or modification of data from one device to another between two devices. It is a key component in building both enterprise-level
+        software and integral day-to-day communication.</p>
+      <p>Both REST and SOAP APIs allow API communication under the HTTP protocol, with differences in their architectural standards.</p>
+      <h2 id="rest-vs-soap">REST vs. SOAP</h2>
+      <h4 id="rest-api">REST API</h4>
+      <p>REST (Representational State Transfer) is a set of programming design principles that is popularly adapted for designing open data-exchanging transfers. REST is widely used in API design for its flexibility and reliability, leading to easier implementations
+        and transfers, as it does not require a strict protocol.</p>
+      <h4 id="soap-api">SOAP API</h4>
+      <p>SOAP (Simple Object Access protocol) is a messaging protocol with a defined framework on how API methods must be implemented. A SOAP based API must be based on XML format. SOAP based APIs has heavier security compliance, allows for any programming
+        model, and can operate under other protocols besides HTTP such as SMTP.</p>
+      <h3 id="key-differences-between-rest-and-soap">Key differences between REST and SOAP</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>REST</th>
+            <th>Soap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>REST is stateless, and allows API invocation without storing any information on the server. Its data transfers are a lot faster than SOAP APIs.</td>
+            <td>SOAP is by default stateless, but it can be made stateful, and that does impact the system where the API request or response occurs.</td>
+          </tr>
+          <tr>
+            <td>REST grants wider system access for communication, allowing more stable transfers.</td>
+            <td>Due to its stricter implementation, when code changes in a SOAP API, it often requires that requesting codes must also make corresponding changes.</td>
+          </tr>
+          <tr>
+            <td>REST is data-driven. It accepts multiple formats such as HTTP, JSON, URL and XML through an endpoint URL and the data values indicate the response of REST API invocation.</td>
+            <td>SOAP is function-driven. It uses XML to create its payload, which generates a larger sized file or response.</td>
+          </tr>
+          <tr>
+            <td>REST supports HTTPS and SSL for data exchanging security.</td>
+            <td>SOAP has built in security compliances (ACID) rather than direct end-to-end communication, which makes its data more secure, making it useful for exchanging sensitive information.</td>
+          </tr>
+          <tr>
+            <td>SOAP APIs cannot be cached.</td>
+            <td>REST APIs can be cached.</td>
+          </tr>
+        </tbody>
+      </table>
+      <!--
+- **Speed:**: REST is stateless, and allows API invocation without storing any information on the server. Its data transfers are a lot faster than SOAP APIs.
+
+- **Reliability**: REST grants wider system access for communication, allowing more stable transfers. Due to its stricter implementation, when code changes in a SOAP API, it often requires that requesting codes must also make corresponding changes.
+
+- **Efficiency**: REST accepts multiple formats such as HTTP, JSON, URL and XML through a simple endpoint URL. SOAP uses XML to create its payload, which generates a larger sized file or response.
+
+- **Security**: SOAP has built in security compliances (such as ACID) rather than direct end-to-end communication, which makes its data more secure.
+
+- **Cacheable**: SOAP API calls cannot be cached whereas REST can be cached.-->
+      <h2 id="when-should-you-use-them">When should you use them?</h2>
+      <p>While it is still a topic of debate as to when REST can be used, it is faster and more powerful and should be used when open, stateless and cacheable data transfers can be made, especially in consideration of smaller data bandwidth available compared
+        to the size of data exchanged. REST can be used in the following examples:</p>
+      <ul>
+        <li>Mobile services</li>
+        <li>Public web services</li>
+        <li>Social network services</li>
+      </ul>
+      <p>SOAP is recommended for applications that deal with stateful data transfers including services that contain sensitive information and require high security, financial services, payment gateways, and telecommunication services.</p>
+      <ul>
+        <li>Banking services</li>
+        <li>Stock trading services</li>
+        <li>E-commerce services</li>
+        <li>Account and password management</li>
+      </ul>
+      <h2 id="summary">Summary</h2>
+      <p>Consider the following requirements for your API choice on deciding whether to use REST or SOAP:</p>
+      <table>
+        <tr>
+          <th>Use SOAP for:</th>
+          <th>Use REST for:</th>
+        </tr>
+        <tr>
+          <td>If there is sensitive data, for example PI<br> (Personal Information) such as accounts, passwords, social security numbers etc.</td>
+          <td>Large and non-sensitive data exchanges, such as exchanging media files or public data sets.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>If the state of data needs to be kept in record for formal state of communication, such as the state of the an airplane seat that a client attempts to book on an airline website. The transaction can only be made if there is an agreement between
+            the price and availability of quantity requested.</td>
+          <td>When data needs to be cached, for example a client requesting the same resource multiple times.</td>
+        </tr>
+        <tr>
+          <td>For general enterprise and high security data exchanges.</td>
+          <td>When the code can be implemented in a way that can be maintained with less or no impact on systems with its usage.</td>
+        </tr>
+      </table>
+    </article>
+  </main>
+</body>
+</html>

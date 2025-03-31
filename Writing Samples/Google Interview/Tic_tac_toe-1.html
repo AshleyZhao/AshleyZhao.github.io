@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="description" content="{{ shortdesc }}">
+  <meta name="source.format" content="markdown">
+  <meta name="copyright" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.Rights.Owner" content="&#xA9;Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="dcterms.rights" content="&#xA9; Copyright IBM Corporation {{ copyright.years }}">
+  <meta name="DC.date" scheme="iso8601" content="{{ lastModified.date }}">
+
+  <!-- Licensed Materials - Property of IBM -->
+  <!-- US Government Users Restricted Rights -->
+  <!-- Use, duplication or disclosure restricted by -->
+  <!-- GSA ADP Schedule Contract with IBM Corp. -->
+
+  <title id="tic-tac-toe-title">Tic Tac Toe</title>
+  <!-- <link rel="stylesheet" href="../style.css"/> -->
+  <style>
+    body {
+      font-family: Helvetica, arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: white;
+      padding: 10px 10px 10px 10px;
+      color: #333;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    
+    ul.compact>li {
+      margin-bottom: 0.4em;
+      margin-top: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    
+    #readme {
+      padding: 3px;
+      background: #EEE;
+      border-radius: 3px;
+    }
+    
+    #readme .markdown-body,
+    #readme .plain {
+      background-color: #fff;
+      border: 1px solid #CACACA;
+      padding: 30px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 20px 0 10px;
+      padding: 0;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+      margin: 10px 0 10px;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      cursor: text;
+      position: relative;
+    }
+    
+    h2 {
+      font-size: 24px;
+      border-bottom: 1px solid #cccccc;
+      color: black;
+    }
+    
+    h3 {
+      font-size: 18px;
+    }
+    
+    blockquote {
+      border-left: 4px solid #dddddd;
+      padding: 0 15px;
+      color: #777777;
+    }
+    
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    li,
+    table,
+    pre {
+      margin: 15px 0;
+    }
+    
+    blockquote> :first-child {
+      margin-top: 0;
+    }
+    
+    blockquote> :last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: #4183C4;
+      text-decoration: none;
+    }
+    
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+    
+    ul :first-child,
+    ol :first-child {
+      margin-top: 0;
+    }
+    
+    ul :last-child,
+    ol :last-child {
+      margin-bottom: 0;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+      font-family: Consolas, Monaco, "Lucida Console", Monospace, "Courier New", Courier;
+    }
+    
+    table {
+      padding: 0;
+      border-collapse: collapse;
+    }
+    
+    table tr {
+      /* border-top: 1px solid #cccccc; */
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+    
+    table tr td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: 6px 13px;
+    }
+    
+    code,
+    tt {
+      margin: 0 2px;
+      padding: 0 5px;
+      white-space: nowrap;
+      border: 1px solid #eaeaea;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+    }
+    
+    pre {
+      background-color: #f8f8f8;
+      border: 1px solid #cccccc;
+      font-size: 13px;
+      line-height: 19px;
+      overflow: auto;
+      padding: 6px 10px;
+      border-radius: 3px;
+    }
+    
+    pre code,
+    pre tt {
+      background-color: transparent;
+      border: none;
+    }
+    
+    pre code {
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      border: none;
+      background: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <main role="main">
+    <article aria-labelledby="tic-tac-toe-title" role="article">
+      <h1 id="tic-tac-toe">Tic Tac Toe</h1>
+      <hr>
+      <p>Tic Tac Toe is a widely popular game all over the world, dating as far back as played in Egypt 1300 BC. Two players take turns placing a marker on the square of a 3x3 grid until either one of the symbols are in a row, column or diagonal, or the
+        grid is full with no moves remaining.</p>
+      <h2 id="requirements">Requirements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Requirement</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Players</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Required</td>
+            <td>Pencil, paper</td>
+          </tr>
+          <tr>
+            <td>Genre</td>
+            <td>Strategy, Turn-based</td>
+          </tr>
+          <tr>
+            <td>Time to play</td>
+            <td>about 1 minute</td>
+          </tr>
+          <tr>
+            <td>Objective</td>
+            <td>Winners place their symbol in a pattern of row, column, or diagonal on the board.</td>
+          </tr>
+          <tr>
+            <td>Tie possible</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="instructions">Instructions</h2>
+      <ol>
+        <li>Players each choose a symbol to represent their moves. Traditional symbols are called nought (O) and crosses (X), or simply O's and X's.</li>
+        <li>Create a 3x3 grid. It can be drawn if not readily available. The grid should have 9 points, with 2 horizontal lines and 2 vertical lines connecting the 3 points of the grid's rows and columns.</li>
+        <li>Players take turns placing their symbol in 1 of the 9 squares of the grid, once per turn. The player represented by X moves first.</li>
+        <li>Players continue alternatively placing symbols until the winning condition is met, or there are no more moves remaining, which will result in a tie.</li>
+      </ol>
+      <h3 id="winning-condition">Winning condition</h3>
+      <p>The player who places their symbol in a row, column, or diagonal on the grid first wins the game.</p>
+    </article>
+  </main>
+</body>
+</html>
