@@ -1,251 +1,221 @@
+
 <!DOCTYPE html>
-<html>
-<title>Ashley Zhao's Profile</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="chart/common.css">
-<link rel="stylesheet" href="chart/03.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashley Zhao | Technical Writer Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-p {
-  font-family: "Times New Roman";
-  font-size:medium;
-}
-/* Create a Parallax Effect */
-.bgimg-1 {
-  background-attachment: local;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-}
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('images/parallax12.jpg');
-  min-height: 100%;
-}
+    nav {
+      background: #fff;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+    nav a {
+      margin: 0 1rem;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.btn {
-  background-color: white;
-  border-radius: 25px;
-  color: grey;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 20px;
-}
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
-.btn:hover {
-  color: white;
-  background-color: darkmagenta;
-}
-</style>
+    section {
+      margin-bottom: 3rem;
+    }
 
-<script>
-  function downloadResume() {
-    <a href="/images/myw3schoolsimage.jpg" download></a>
-  }
-</script>
+    h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+
+    .sample {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .sample h3 {
+      margin-top: 0;
+    }
+
+    .skills-list,
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skills-list span,
+    .tools-list span {
+      background: #ddeeff;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background: #004080;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    a.button:hover {
+      background: #002e5b;
+    }
+
+    .buttonSwitch {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0052cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-    </a>
-    <a href="#home" class="w3-bar-item w3-button" style="color:#aaaaaa"> HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color:#aaaaaa"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" style="color:#aaaaaa"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="color:#aaaaaa"><i class="fa fa-envelope"></i> CONTACT</a>
+  <header>
+    <h1>Ashley Zhao</h1>
+    <p>Technical Writer | Documentation Specialist | Content Strategist</p>
+  </header>
 
-    <a href="https://www.linkedin.com/in/ashley-zhao-a99117110/" class="w3-bar-item w3-button w3-right" style="color:#aaaaaa"> <img src='images/SM_icons/linkedin.png'></a>
-      <a href="https://www.facebook.com/profile.php?id=100010891507259" class="w3-bar-item w3-button w3-right" style="color:#aaaaaa"> <img src='images/SM_icons/facebook.png'></a>
-      <a href="https://github.com/AshleyZhao/AshleyZhao.github.io/tree/main" class="w3-bar-item w3-button w3-right" style="color:#aaaaaa"> <img src='images/SM_icons/github.png'></a>
-      <a href="#home" class="w3-bar-item w3-button w3-right" style="color:#aaaaaa"> <img src='images/SM_icons/whatsapp.png'></a>
-    <!--Add email and youtube later-->
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#samples">Writing Samples</a>
+    <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
+  <div class="container">
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ASHLEY <span class="w3-hide-small">ZHAO</span>
-  </div>
-</div>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m a technical writer who translates complex ideas into clear, user-friendly documentation. With a background in software development and instructional design, I specialize in creating API docs, product manuals, UI copy, and knowledge bases for both technical and non-technical audiences.</p>
+    </section>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <p class="w3-center"><em></em></p>
-  <p>I am a proud graduate of Queen's University (2019) with a BA in Computing with passion not only for technology but also writing. During my post-secondary education I have studied core skills for understanding computing,
-    including system-level programming, Computer Algorithms, Data Structures and Architecture, and practical implementations such as Web Development and Design and Programming Paradigms. From my professional career at IBM,
-    I am also familiar with Data Analytics concepts and Machine Learning, and have experienced a big leap in professional communciation and team task organization. 
-    I aim to make product documentation as user-friendly as possible no matter the learning curve, from popular Python packages to Enterprise-oriented and technically dense applications.
-  </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i></b></p><br>
+    <section id="samples">
+      <h2>Writing Samples</h2>
 
-      <a href="https://github.com/AshleyZhao/AshleyZhao.github.io/blob/main/Resumes/Ashley%20Zhao%20Resume.pdf" download><button class="btn" style="width:100%" onclick="downloadResume()"><i class="fa fa-download"></i> Download Resume</button></a>
-
-    </div>
-
-    
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p class = "w3-row"><br>Welcome to my profile website. I have done:<br>
-      <ul>
-        <li>Online documentation concerning Machine Learning service, Rest API, microservices</li>
-        <li>Tutorial samples about data on Cloud, model training, model deployment, pipelines, R applications.</li>
-        <li>Using Python and other SDK/libraries such as <code>matplotlib, Scikit-learn</code>.</li>
-        <li>End-to-end testing of various ETL tutorials in</li>
-      </ul>
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here is a list of my works.<br></em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3  w3-card w3-left-align">
-      <h2><b>Professional work</b></h2>
-        <ul>
-          <li style="font-size:15px">I manage content for the <a href="https://dataplatform.cloud.ibm.com/gallery?context=cpdaas" style="font-size:15px" target="_blank" class="w3-hover-opacity">Watson Studio gallery</a>.</li>
-          <li style="font-size:15px">I write documentation for <a href="https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/welcome-main.html" target="_blank" style="font-size:15px" class="w3-hover-opacity">IBM WS Cloud</a> and <a href="https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/overview/welcome.html" style="font-size:15px" class="w3-hover-opacity">IBM CP4D</a>.</li>
-          <li style="font-size:15px">I created <a href="https://www.youtube.com/watch?v=US2B_0A8p-4" target="_blank" style="font-size:15px" class="w3-hover-opacity">WS videos</a>.</li>
-        </ul>
-      <!--<img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">-->
-    </div>
-
-    <div class="w3-col m3  w3-card w3-left-align" style="margin-left:100px;margin-right:100px;">
-      <h2><b>Coding samples</b></h2>
-      <p style="font-size:15px">The majority of my public coding work which does not transgress privacy rules can be found in my <a href="https://github.com/AshleyZhao/AshleyZhao.github.io" target="_blank" style="font-size:15px" class="w3-hover-opacity">GitHub</a>. Continuously being updated.<br><br></p>
-    </div>
-
-    <div class="w3-col m3 w3-card w3-left-align">
-      <h2><b>Writing samples</b></h2>
-      <p style="font-size:15px">The majority of my English work which does not transgress privacy rules can be found in my <a href="https://github.com/AshleyZhao/AshleyZhao.github.io/tree/main/Writing%20Samples" target="_blank" style="font-size:15px" class="w3-hover-opacity">GitHub/Writing Samples</a>.<br><br><br></p>
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center"><em>Get in touch with me!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <ul>
-        <li><H3><a href="https://www.linkedin.com/in/ashley-zhao-a99117110/">LinkedIn</a></H3></li>
-        <li><H3><a href="https://github.com/AshleyZhao">GitHub</a></H3></li>
-        <li><H3><a href="https://www.facebook.com/profile.php?id=100010891507259">FaceBook</a></H3></li>
-        <li><H3><a href="">Twitter</a></H3></li>
-      </ul>
-      
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Toronto, CAN<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 647-915-6064<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ashley.zhao.dacml@gmail.com<br>
+      <div class="sample">
+        <h3>API Reference Quick Sample</h3>
+        <p>Learn how to use an API that instantly find the occurences of up to 5 select words in a specified input string.</p>
+        <a class="button" href="https://github.com/AshleyZhao/AshleyZhao.github.io/blob/main/Writing%20Samples/Google%20Interview/Haystack_function_doc-1.html" target="_blank">View Sample</a>
       </div>
-      </form>
-    </div>
+
+      <div class="sample">
+        <h3>REST and SOAP API Quick Sample</h3>
+        <p>Learn about key differences between REST and SOAP API architecture.</p>
+        <a class="button" href="https://github.com/AshleyZhao/AshleyZhao.github.io/blob/main/Writing%20Samples/Google%20Interview/REST_vs_SOAP.html" target="_blank">View Sample</a>
+      </div>
+
+      <div class="sample">
+        <h3>SpendGuard MVP Proposal</h3>
+        <p>A POC for a high-level architecture of a budgeting app.</p>
+        <p><b>Format:</b> PDF</p>
+        <a class="button" href="https://github.com/AshleyZhao/AshleyZhao.github.io/blob/main/Writing%20Samples/POC/SpendGuard%20MVP%20Proposal.pdf" target="_blank">View Sample</a>
+      </div>
+
+      <div class="sample">
+        <h3>Yatai User Guide POC</h3>
+        <p>Step-by-step user instructions and troubleshooting sections for a machine learning deployment open-source framework for building, packaging, and deploying machine learning models as production-ready APIs or microservices.</p>
+        <p><b>Format:</b> PDF</p>
+        <a class="button" href="https://github.com/AshleyZhao/AshleyZhao.github.io/blob/main/Writing%20Samples/POC/Yatai%20POC.pdf" target="_blank">View Sample</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>Information Architecture</span>
+        <span>Content Strategy</span>
+        <span>Task Analysis</span>
+        <span>UX Writing</span>
+        <span>Agile/Scrum Documentation</span>
+        <span>API Documentation</span>
+        <span>Markdown & HTML</span>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Tools</h2>
+      <div class="tools-list">
+        <span>MadCap Flare</span>
+        <span>Confluence</span>
+        <span>Jira</span>
+        <span>Figma</span>
+        <span>Git & GitHub</span>
+        <span>Visual Studio Code</span>
+        <span>Notion</span>
+        <span>Snagit</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Looking to collaborate? Let’s chat!</p>
+      <p><strong>Email:</strong> ashley.zhao.dacml@gmail.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashley-zhao-a99117110/" target="_blank">https://www.linkedin.com/in/ashley-zhao-a99117110/</a></p>
+    </section>
+
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Banner image courtesy of Pixabay.</p>
-</footer>
- 
-<script>
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-black", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
-
-</script>
-		
-		<!-- Example JavaScript -->
-		<script src="chart/03.js"></script>
+  <footer>
+    &copy; 2025 Ashley Zhao. All rights reserved.
+  </footer>
 
 </body>
 </html>
